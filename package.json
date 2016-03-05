@@ -1,6 +1,6 @@
 {
   "name": "over-extend",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Utility to help extend built-ins like Error and Array with Babel 6",
   "main": "index.js",
   "scripts": {
@@ -21,8 +21,8 @@
   "author": "Blade Barringer <blade@crookedneighbor.com>",
   "contributors": [
     {
-      "name" : "Matteo Pagliazzi", 
-      "email" : "matteopagliazzi@gmail.com"
+      "name": "Matteo Pagliazzi",
+      "email": "matteopagliazzi@gmail.com"
     }
   ],
   "license": "MIT",
@@ -39,7 +39,7 @@
     "standard": "^6.0.7"
   },
   "standard": {
-    "globals": [ 
+    "globals": [
       "after",
       "afterEach",
       "before",
