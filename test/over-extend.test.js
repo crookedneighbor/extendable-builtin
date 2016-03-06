@@ -1,6 +1,6 @@
 const OverExtend = require('../index')
 
-describe('ExtendableBuiltin', function () {
+describe('OverExtend', function () {
   beforeEach(function () {
     class ExtendableError extends OverExtend(Error) {
       constructor () {
