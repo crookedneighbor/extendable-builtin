@@ -1,3 +1,5 @@
+'use strict'
+
 // Adapted from https://phabricator.babeljs.io/T3083
 module.exports = function OverExtend (builtin) {
   function ExtendableBuiltin () {
