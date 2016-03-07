@@ -1,4 +1,6 @@
-const OverExtend = require('../index')
+'use strict'
+
+const OverExtend = require('../../index')
 
 describe('OverExtend', function () {
   beforeEach(function () {

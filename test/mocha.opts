@@ -1,2 +1,1 @@
 -r test/helper
---compilers js:babel-register
