@@ -136,6 +136,45 @@ let error = new ValidationError({
 error.prettyPrintErrors()
 ```
 
+### Array
+
+If you extend the `Array` class on your own, you'll have to do extra work in the constructor to make it behave like a normal array when instantiating. 
+
+When using `ExendableArray`, it's recomended that you do not include a constructor in subclass or it may not instantiate correctly. See [the source code](builtins/array.js) for more details.
+
+```js
+const ExtendableArray = require('over-extend/builtins/array')
+
+class MyArray extends ExtendableArray {
+  getFirst () {
+    return this[0]
+  }
+
+  getLast () {
+    return this[this.length - 1]
+  }
+
+  reverseEachElement () {
+    for (var i = 0; i < this.length; i++) {
+      let element = this[i]
+      let reversedElement = element.split('').reverse().join('')
+
+      this[i] = reversedElement
+    }
+  }
+}
+
+//------------------------------
+
+let array = new MyArray('abc', '123')
+
+array.reverseEachElement()
+
+array // [ 'cba', '321' ]
+array.getFirst() // 'cba'
+array.getLast() // '321'
+```
+
 ## Credits
 
 This was largely adapted from https://phabricator.babeljs.io/T3083
