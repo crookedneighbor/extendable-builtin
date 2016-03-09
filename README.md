@@ -79,7 +79,26 @@ console.log(userNotFoundError.statusCode) // 404
 
 ## Ready Made Extendables
 
-If you're running Node >= v4 or using Babel v6, you can use some pre-configured extendable classes
+If you're running Node >= v4, you can use some pre-configured extendable classes. 
+
+**Note:** If you're using Babel 6, you cannot use these readymade examples with the `transform-es2015-classes` plugin (included in the `es-2015` preset) or you will recieve `TypeError: Class constructors cannot be invoked without 'new'`. To migitgate this, you can install only the plugins that provide functionality that Node v4 does not already provide:
+
+```json
+{
+  "plugins": [
+    "check-es2015-constants",
+    "transform-es2015-for-of",
+    "transform-es2015-arrow-functions",
+    "transform-es2015-parameters",
+    "transform-es2015-spread",
+    "transform-es2015-destructuring",
+    "transform-es2015-modules-commonjs",
+    "transform-regenerator"
+  ]
+}
+```
+
+If you're using npm 3, you can simply install the `es-2105` preset and specify the plugins in your `.babelrc`.
 
 ### Error
 
