@@ -1,6 +1,6 @@
 {
   "name": "over-extend",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Utility to help extend built-ins like Error and Array with Babel 6",
   "main": "index.js",
   "scripts": {
